@@ -18,12 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 input.classList.remove('border-color-changed');
                 errorIcon.classList.remove('show-error');
             }
-            if (!isValidEmail(emailInput.value)) {
+            if (input.id === 'emailInput' && !isValidEmail(emailInput.value)) {
                 input.classList.add('border-color-changed');
                 errorIcon.classList.add('show-error');
-                emailInput.classList.add('invalid-email');
-            } else {
-                emailInput.classList.remove('invalid-email');
             }
         });
 
@@ -46,6 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
             displayErrorMessage('emailError', 'Email cannot be empty');
         } else if (!isValidEmail(emailInput.value)) {
             displayErrorMessage('emailError', 'Please enter a valid email address');
+            emailInput.classList.add('invalid-email');
+        } else {
+            emailInput.classList.remove('invalid-email');
         }
         if (passwordInput.value === '') {
             displayErrorMessage('passwordError', 'Password cannot be empty');
