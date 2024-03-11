@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('registerForm');
     const inputs = form.querySelectorAll('input');
 
+    const emailInput = document.getElementById('emailInput');
+
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -16,15 +18,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 input.classList.remove('border-color-changed');
                 errorIcon.classList.remove('show-error');
             }
-            if (input.id === 'emailInput' && !isValidEmail(input.value)) {
+            if (!isValidEmail(emailInput.value)) {
                 input.classList.add('border-color-changed');
                 errorIcon.classList.add('show-error');
+                emailInput.classList.add('invalid-email');
+            } else {
+                emailInput.classList.remove('invalid-email');
             }
         });
 
         const firstNameInput = document.getElementById('firstNameInput');
         const lastNameInput = document.getElementById('lastNameInput');
-        const emailInput = document.getElementById('emailInput');
         const passwordInput = document.getElementById('passwordInput');
 
         clearErrorMessage('firstNameError');
@@ -42,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
             displayErrorMessage('emailError', 'Email cannot be empty');
         } else if (!isValidEmail(emailInput.value)) {
             displayErrorMessage('emailError', 'Please enter a valid email address');
-            emailInput.classList.add('invalid-email');
         }
         if (passwordInput.value === '') {
             displayErrorMessage('passwordError', 'Password cannot be empty');
