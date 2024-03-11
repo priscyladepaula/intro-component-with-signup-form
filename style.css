@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: hsl(0, 100%, 74%);
+    background-color: #FF7A7A;
     background-image: url("images/bg-intro-desktop.png");
     display: flex;
     justify-content: center;
@@ -142,11 +142,11 @@ input:hover {
 
 .notice a {
     text-decoration: none;
-    color: hsl(0, 100%, 74%);
+    color: #FF7A7A;
 }
 
 .error-message {
-    color: hsl(0, 100%, 74%);
+    color: #FF7A7A;
     font-style: italic;
     font-size: 10px;
     font-weight: 500;
@@ -160,12 +160,12 @@ input:hover {
 }
 
 .border-color-changed {
-    border-color: hsl(0, 100%, 74%);
+    border-color: #FF7A7A;
     border-width: 2px;
 }
 
 .invalid-email {
-    color: hsl(0, 100%, 74%);
+    color: #FF7A7A;
 }
 
 .error-icon {
@@ -175,7 +175,7 @@ input:hover {
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-color: hsl(0, 100%, 74%);
+    background-color: #FF7A7A;
     border-radius: 50%;
     display: flex;
     justify-content: center;
