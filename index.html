@@ -25,32 +25,32 @@
 
     <aside>
       <div class="message"><b>Try it free 7 days</b> then $20/mo. thereafter</div>
-      <form action="register" id="registerForm" class="register">
+      <form action="register" id="registerForm" class="register" role="form">
         <div class="input-group">
-          <input type="text" id="firstNameInput" placeholder="First Name">
+          <input type="text" id="firstNameInput" placeholder="First Name" aria-describedby="First Name">
           <div class="error-icon">!</div>
           <small id="firstNameError" class="error-message"></small>
         </div><br>
 
         <div class="input-group">
-          <input type="text" id="lastNameInput" placeholder="Last Name">
+          <input type="text" id="lastNameInput" placeholder="Last Name" aria-describedby="Last Name">
           <div class="error-icon">!</div>
           <small id="lastNameError" class="error-message"></small>
         </div><br>
 
         <div class="input-group">
-          <input type="text" id="emailInput" placeholder="Email Address">
+          <input type="text" id="emailInput" placeholder="Email Address" aria-describedby="Email Address">
           <div class="error-icon">!</div>
           <small id="emailError" class="error-message"></small>
         </div><br>
 
         <div class="input-group">
-          <input type="password" id="passwordInput" placeholder="Password">
+          <input type="password" id="passwordInput" placeholder="Password" aria-describedby="Password">
           <div class="error-icon">!</div>
           <small id="passwordError" class="error-message"></small>
         </div><br>
 
-        <button type="submit" id="submitButton">Claim your free trial</button>
+        <button type="submit" id="submitButton" aria-label="Submit Registration Form">Claim your free trial</button>
         <p class="notice">By clicking the button, you are agreeing to our <b><a href="#">Terms and Services</a></b></p>
       </form>
     </aside>
